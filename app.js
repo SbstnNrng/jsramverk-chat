@@ -9,6 +9,7 @@ io.on('connection', socket => {
     socket.on('send message', body => {
         io.emit('message', body);
     });
+    socket.off("send message");
 });
 
 server.listen(3000);
